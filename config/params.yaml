@@ -1,0 +1,25 @@
+# SLAM and sensor tuning parameters
+slam:
+  map_resolution: 0.05           # meters per cell
+  map_size: 200                  # cells per side (square map)
+  update_rate_hz: 10.0
+  publish_tf: true
+
+sensors:
+  lidar:
+    topic: scan
+    range_min: 0.15
+    range_max: 12.0
+    obstacle_front_threshold: 0.5
+    obstacle_side_threshold: 0.35
+  odom:
+    topic: odom
+
+controller:
+  control_frequency: 20.0
+  max_linear_vel: 0.5
+  max_angular_vel: 1.0
+  heading_pid:
+    kp: 1.2
+    ki: 0.0
+    kd: 0.1
